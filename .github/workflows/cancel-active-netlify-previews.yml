@@ -5,6 +5,8 @@ name: Cancel active Netlify previews
 # active deploy-preview builds only, leaving production deploys untouched.
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       branch:
