@@ -9,14 +9,8 @@ name: Changeset check
 # changesets and shouldn't itself need one.
 
 on:
-  pull_request:
+  push:
     branches: [main]
-    paths:
-      - "packages/**"
-      - ".changeset/**"
-      - ".github/workflows/changeset-check.yml"
-      - "scripts/check-changeset.mjs"
-
 permissions:
   contents: read
 
