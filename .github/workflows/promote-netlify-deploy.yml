@@ -10,6 +10,8 @@ name: Promote Netlify deploy
 # never cancelled.
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       site:
