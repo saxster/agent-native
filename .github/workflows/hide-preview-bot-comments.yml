@@ -1,6 +1,8 @@
 name: Hide preview bot comments
 
 on:
+  push:
+    branches: [main]
   issue_comment:
     types: [created, edited]
 
