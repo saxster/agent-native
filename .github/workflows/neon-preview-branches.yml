@@ -1,10 +1,8 @@
 name: Neon Preview Branches
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
+  push:
     branches: [main]
-
 permissions:
   contents: read
 
