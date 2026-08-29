@@ -1,14 +1,8 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches: [main]
-
-# Cancel an in-progress CI run when a new commit is pushed to the same PR.
-# Without this, every push starts a fresh ~20-min matrix while the prior one
-# keeps running, stacking 3-4 overlapping runs on a busy PR. Keyed on the PR
-# number (falling back to the ref) so runs on different PRs never cancel each
-# other.
 concurrency:
   group: ci-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
