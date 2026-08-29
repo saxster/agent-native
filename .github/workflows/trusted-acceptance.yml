@@ -1,6 +1,8 @@
 name: Trusted acceptance
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       workspace:
@@ -8,10 +10,6 @@ on:
         required: true
         type: string
         default: calendar-content
-      pull_request:
-        description: Open same-repository pull request number
-        required: false
-        type: string
       sha:
         description: Full current pull request head SHA
         required: false
