@@ -1,9 +1,8 @@
 name: Cancel stale Netlify previews
 
 on:
-  pull_request:
-    types: [synchronize, closed]
-
+  push:
+    branches: [main]
 permissions:
   contents: read
 
