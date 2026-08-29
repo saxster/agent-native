@@ -9,8 +9,8 @@ name: Audit hosted app health
 # merged to main. Use the manual trigger to warm on demand.
 
 on:
-  schedule:
-    - cron: "17 * * * *"
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions: {}
