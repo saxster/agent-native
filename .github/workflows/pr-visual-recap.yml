@@ -5,9 +5,8 @@ name: PR Visual Recap
 # Plain `pull_request` (NOT `pull_request_target`) so fork code never sees secrets.
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review, labeled, closed]
-
+  push:
+    branches: [main]
 permissions:
   contents: read
 
