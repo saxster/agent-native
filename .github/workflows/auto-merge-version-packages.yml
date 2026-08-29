@@ -19,10 +19,8 @@ name: Auto-merge Version Packages PR
 # `changeset publish` and pushes the new versions to npm.
 
 on:
-  pull_request:
+  push:
     branches: [main]
-    types: [opened, reopened, synchronize, ready_for_review]
-
 permissions: {}
 
 # Cancel earlier runs if the bot pushes another update to the same PR
