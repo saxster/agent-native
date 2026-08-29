@@ -1,6 +1,8 @@
 name: Gated evals
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       suite:
@@ -12,10 +14,6 @@ on:
           - content-parity
           - brain
           - all
-  schedule:
-    # Nightly UTC check. Suites without configured secrets report skipped.
-    - cron: "0 9 * * *"
-
 concurrency:
   group: gated-evals-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: false
