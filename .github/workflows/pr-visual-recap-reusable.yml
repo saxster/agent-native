@@ -20,6 +20,8 @@ name: PR Visual Recap (reusable)
 # when the caller fires on pull_request.
 
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       # Version of @agent-native/recap-cli to use when the consumer repo does NOT
