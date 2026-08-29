@@ -1,6 +1,8 @@
 name: Trusted acceptance reaper
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       workspace:
@@ -8,9 +10,6 @@ on:
         required: true
         type: string
         default: calendar-content
-  schedule:
-    - cron: "17 * * * *"
-
 permissions:
   contents: read
 
